@@ -16,6 +16,7 @@ class Peliculas {
 }
 
 class Pelicula {
+  String uniqueID;
   double popularity;
   int voteCount;
   bool video;
@@ -74,6 +75,14 @@ class Pelicula {
     }
   }
 
+   String getBackgroundImg(){
+    if(posterPath != null){
+
+      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
+    }else {
+      return 'http://via.placeholder.com/350x150';
+    }
+  }
 }
 
 
